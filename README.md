@@ -1,2 +1,12 @@
-# daily-commit-027
-My twenty-seventh daily GitHub activity repository
+import os
+
+def list_files_in_directory(path="."):
+    try:
+        return os.listdir(path)
+    except FileNotFoundError:
+        return []
+
+if __name__ == "__main__":
+    print("Files in current directory:")
+    for f in list_files_in_directory():
+        print(f)
